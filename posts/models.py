@@ -14,7 +14,7 @@ class Post(models.Model):
     content = models.TextField()
     author = models.ForeignKey('authors.Author', on_delete=models.CASCADE, related_name='posts')
     category = models.ForeignKey('categories.Category', on_delete=models.CASCADE, related_name='posts')
-    tags = models.ManyToManyField('tags.Tag')
+    tags = models.ManyToManyField('tags.Tag', related_name='posts')
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='draft')
