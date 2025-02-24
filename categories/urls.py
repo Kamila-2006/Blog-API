@@ -5,6 +5,6 @@ from .views import CategoryAPIView, CategoryPostsAPIView
 app_name = 'categories'
 
 urlpatterns = [
-    path('categories/', CategoryAPIView.as_view(), name='categories-list'),
+    path('', CategoryAPIView.as_view(), name='categories-list'),
     path('categories/<int:category_id>/posts/', CategoryPostsAPIView.as_view(), name='category-posts'),
 ]

@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/posts/',include('posts.urls', namespace='posts')),
     path('api/categories/', include('categories.urls', namespace='categories')),
     path('api/tags/', include('tags.urls', namespace='tags')),
+    path('api/authors/', include('authors.urls', namespace='authors')),
 ]
