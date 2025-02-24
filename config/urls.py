@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/posts/',include('posts.urls', namespace='posts')),
     path('api/categories/', include('categories.urls', namespace='categories')),
+    path('api/tags/', include('tags.urls', namespace='tags')),
 ]
